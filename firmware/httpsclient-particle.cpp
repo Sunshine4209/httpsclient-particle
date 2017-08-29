@@ -67,14 +67,14 @@ const char * g_host;
 const char * g_path;
 
 
-void httpsclientSetPath(const char * path) {
-  g_path = path;
+void httpsclientSetPath(const char * mpath) {
+  g_path = mpath;
 }
 
-int httpsclientSetup(const char * host, const char * path) {
+int httpsclientSetup(const char * host, const char * mmpath) {
   int rc;
   g_host = host;
-  g_path = path;
+  g_path = mmpath;
   if ((rc = matrixSslOpen()) < 0) {
     if (g_https_trace) _psTrace("MatrixSSL library init failure.");
     return rc;
