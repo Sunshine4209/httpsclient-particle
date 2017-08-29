@@ -21,11 +21,11 @@ extern bool g_https_complete;
 extern uint32 g_bytes_received;
 extern const bool g_https_trace;
 
-int httpsclientSetup(const char * host, const char * path);
+int httpsclientSetup(const char * host, const char * mmpath);
 int httpsClientConnection(unsigned char * requestContent, uint32 msg_len,
 			  const char * msg);
 void httpsclientCleanUp();
-void httpsclientSetPath(const char * path);
+void httpsclientSetPath(const char * mpath);
 
 #ifdef __cplusplus
 }
