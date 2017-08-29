@@ -66,6 +66,7 @@ int32 loadRsaKeys(uint32 key_len, sslKeys_t *keys,
 const char * g_host;
 const char * g_path;
 
+
 void httpsclientSetPath(const char * path) {
   g_path = path;
 }
@@ -322,6 +323,7 @@ int httpsClientConnection(unsigned char * requestContent, uint32 msg_len,
   int32 rc, len, transferred;
   g_httpRequestHdr = requestContent;
 
+
   memset(&options, 0x0, sizeof(sslSessOpts_t));
   options.versionFlag = sessionFlag;
   options.userPtr = keys;
@@ -458,6 +460,9 @@ int httpsClientConnection(unsigned char * requestContent, uint32 msg_len,
     if (g_https_trace) {
       for (int i = 0 ; i < len; i++) {
 	Serial.print((char)g_buf[i]);
+          
+          Serial.print("insert my favorite word here");
+          
       }
       Serial.println();
     }
