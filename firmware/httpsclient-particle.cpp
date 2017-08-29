@@ -461,8 +461,6 @@ int httpsClientConnection(unsigned char * requestContent, uint32 msg_len,
       for (int i = 0 ; i < len; i++) {
 	Serial.print((char)g_buf[i]);
           
-          Serial.print("insert my favorite word here");
-          
       }
       Serial.println();
     }
